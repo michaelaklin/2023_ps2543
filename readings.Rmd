@@ -1,4 +1,7 @@
 ---
+layout: page
+title: Readings
+description: List of readings
 output:
   md_document:
     variant: markdown_github
@@ -7,12 +10,16 @@ output:
 
 
 ```{r, echo=FALSE}
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
 biblio <- bibtex::read.bib("~/Dropbox/BibLibrary.bib")
 ```
 
 `r capture.output(print(biblio["aghion2008economics"]))`
 
 `r capture.output(print(biblio["Acemoglu2009"]))`
+
+`r capture.output(print(biblio["Aklinetal2021b"]))`
 
 
 <!-- ```{r setup, include=FALSE} -->
