@@ -37,10 +37,11 @@ footer_content:
 # Collections for website data
 collections:
   staffers:
-  modules:
-  schedules:
+#  modules:
+  # schedules:
   announcements:
   slides:
+
 # Default layouts for each collection type
 defaults:
   - scope:
@@ -49,16 +50,16 @@ defaults:
     values:
       layout: staffer
       subpath: '/assets/images/'
-  - scope:
-      path: ''
-      type: modules
-    values:
-      layout: module
-  - scope:
-      path: ''
-      type: schedules
-    values:
-      layout: schedule
+  # - scope:
+  #     path: ''
+  #     type: modules
+  #   values:
+  #     layout: module
+  # - scope:
+  #     path: ''
+  #     type: schedules
+  #   values:
+  #     layout: schedule
   - scope:
       path: ''
       type: announcements
