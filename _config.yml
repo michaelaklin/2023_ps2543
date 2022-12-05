@@ -28,7 +28,7 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
-  Kevin Lin:
+  Michaël Aklin:
     - 'https://michaelaklin.github.io'
   Just the Class on GitHub:
     - 'https://github.com/michaelaklin/2023_ps2523'
