@@ -19,3 +19,7 @@ description: >-
 ## About
 
 This page contains all the material needed for PS2543 (spring 2023).
+
+## Contact
+
+For any question, please reach out to aklin@pitt.edu. 
