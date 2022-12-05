@@ -1,27 +1,38 @@
 ---
-output: html_document
+output:
+  md_document:
+    variant: markdown_github
+    preserve_yaml: true
 ---
 
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(cache=FALSE, dev='pdf')
-
-library(RefManageR)
-# library(knitcitations)
-# library(rcrossref)
-bib <- ReadBib("~/Dropbox/BibLibrary.bib")
-myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+```{r, echo=FALSE}
+biblio <- bibtex::read.bib("~/Dropbox/BibLibrary.bib")
 ```
 
+`r capture.output(print(biblio["aghion2008economics"]))`
+
+`r capture.output(print(biblio["Acemoglu2009"]))`
+
+
+<!-- ```{r setup, include=FALSE} -->
+<!-- knitr::opts_chunk$set(cache=FALSE, dev='pdf') -->
+
+<!-- library(RefManageR) -->
+<!-- # library(knitcitations) -->
+<!-- # library(rcrossref) -->
+<!-- bib <- ReadBib("~/Dropbox/BibLibrary.bib") -->
+<!-- myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20) -->
+<!-- ``` -->
 
 
 
-```{r, echo = FALSE, results="asis"} 
-bib["aghion2008economics"]
-```
 
-```{r, echo = FALSE, results="asis"} 
-bib["Acemoglu2009"]
-```
+<!-- ```{r, echo = FALSE, results="asis"}  -->
+<!-- bib["aghion2008economics"] -->
+<!-- ``` -->
+
+<!-- ```{r, echo = FALSE, results="asis"}  -->
+<!-- bib["Acemoglu2009"] -->
+<!-- ``` -->
 
