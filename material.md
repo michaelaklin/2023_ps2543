@@ -9,5 +9,6 @@ description: Links to course material.
 * Week 1 [slides](./assets/slides/Session_1.html)
 * Week 2 link
 * Week 3 link
-* Week 3 link
-* Week 3 link
+* Week 4 link
+* Week 5 link
+* Week 6 link

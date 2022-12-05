@@ -41,6 +41,7 @@ collections:
   # schedules:
   announcements:
   material:
+  readings:
 
 # Default layouts for each collection type
 defaults:
@@ -70,6 +71,11 @@ defaults:
       type: material
     values:
       layout: material
+  - scope:
+      path: ''
+      type: readings
+    values:
+      layout: readings
 
 compress_html:
   clippings: all

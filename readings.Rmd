@@ -1,0 +1,27 @@
+---
+output: html_document
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+
+library(RefManageR)
+# library(knitcitations)
+# library(rcrossref)
+bib <- ReadBib("~/Dropbox/BibLibrary.bib")
+myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+```
+
+
+
+
+```{r, echo = FALSE, results="asis"} 
+bib["aghion2008economics"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Acemoglu2009"]
+```
+
