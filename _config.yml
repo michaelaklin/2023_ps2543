@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Politics of Growth (spring 2023)
+title: Politics of Growth
 #tagline: A Jekyll template for course websites
 description: Course material for PS2543
 author: Michaël Aklin
@@ -40,6 +40,7 @@ collections:
   modules:
   schedules:
   announcements:
+  slides:
 # Default layouts for each collection type
 defaults:
   - scope:
@@ -63,6 +64,11 @@ defaults:
       type: announcements
     values:
       layout: announcement
+  - scope:
+      path: ''
+      type: slides
+    values:
+      layout: slides
 
 compress_html:
   clippings: all
