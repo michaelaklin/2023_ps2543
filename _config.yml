@@ -17,7 +17,7 @@ title: Politics of Growth (spring 2023)
 #tagline: A Jekyll template for course websites
 description: Course material for PS2543
 author: Michaël Aklin
-baseurl: '/2023_ps2523' # the subpath of your site, e.g. /blog
+baseurl: '/2023_ps2543' # the subpath of your site, e.g. /blog
 url: 'https://michaelaklin.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
@@ -31,7 +31,7 @@ aux_links:
   Michaël Aklin:
     - 'https://michaelaklin.github.io'
   Just the Class on GitHub:
-    - 'https://github.com/michaelaklin/2023_ps2523'
+    - 'https://github.com/michaelaklin/2023_ps2543'
 footer_content:
 
 # Collections for website data
