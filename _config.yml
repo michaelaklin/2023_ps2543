@@ -41,7 +41,8 @@ collections:
 # schedules:
   announcements:
   material:
-  readings:
+  syllabus:
+#  readings:
 
 # Default layouts for each collection type
 defaults:
@@ -73,9 +74,9 @@ defaults:
       layout: material
   - scope:
       path: ''
-      type: readings
+      type: syllabus
     values:
-      layout: readings
+      layout: syllabus
 
 compress_html:
   clippings: all

@@ -1,0 +1,1171 @@
+---
+output: 
+  pdf_document:
+    keep_tex: false
+    keep_md: yes
+    fig_caption: yes
+    latex_engine: pdflatex
+    template: ~/Dropbox/Teaching/svm-latex-syllabus.tex
+geometry: margin=1in
+
+title: "Political Economy of Growth (PS 2543)"
+author: Michaël Aklin
+date: "Spring 2023"
+
+email: "aklin@pitt.edu"
+web: "michaelaklin.github.io"
+officehours: "TBD"
+office: "TBD"
+classroom: "TBD"
+classhours: "TBD"
+
+fontfamily: mathpazo
+fontsize: 11pt
+header-includes:
+   - \linespread{1.05}
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+mon <- as.Date("2023-01-09")
+#mon <- as.Date("2021-01-25")
+# fri <- as.Date("2016-01-08")
+advdate <- function(obj, adv) {
+ tmon <- obj + 7*(adv-1)
+ tfri <- obj + 4 + 7*(adv-1)
+ tmon <- format(tmon, format="%m/%d")
+ tfri <- format(tfri, format="%m/%d")
+ zadv <- sprintf("%02d", adv)
+ tmp <- paste("Week ",zadv,sep='',", ", tmon)
+# tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
+ return(tmp)
+}
+
+
+library(RefManageR)
+# library(knitcitations)
+# library(rcrossref)
+bib <- ReadBib("~/Dropbox/BibLibrary.bib")
+myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+```
+
+
+
+
+
+
+# Course Objectives
+
+This graduate course is devoted to the study of the politics of economic growth. While this is nominally a course at the intersection of IPE and CPE, you will see that it borrows heavily from other subfields and disciplines (primarily econonomics, but also public policy, management, history, sociology, etc.).
+
+The aim for this course is:
+
+- to ensure that you have a strong overview of theoretical models of growth
+
+- to show the richness of rigorous empirical work that has been conducted
+
+- to stimulate new research ideas, new theories, and novel empirical designs
+
+Note: the course is primarily one based on presentations and discussions. The readings consists in a mix of 'classics' and recent papers. The latter were selected because they are either interesting (if I read them) or they seem interesting (based on the abstract). 
+
+
+# Requirements
+
+**Assignments**. 
+
+- 50%: a research project/pre-analysis plan (including theory + empirical design; data analysis optional) 
+
+- 30%: in-class presentations and participation. 
+
+- 20%: a book review. 
+
+**Grade scale**: 0 < 60: F, 60 < 64: D-, 64 < 67: D, 67 < 70: D+, 70 < 73: C-, 74 < 77: C, 77 < 80: C+, 80 < 84: B-, 84 < 87: B, 87 < 90: B+, 90 < 94: A-, 93 or more: A. "Y < X" means: "from Y up to, but not including X." Grades are not rounded up.
+
+**Late submissions** are penalized by a loss of 2 percentage points per day. If you have issues that prevent you from submitting an assignment on time, then please let me know immediately. If you inform me _after_ a deadline has passed, I will need to be provided justification (e.g. doctor's note) to cancel the late submission penalty. 
+
+**Important note**: you can discuss ideas with your fellow students, but you must do your assignments individually. For pedagogical reasons, it is essential that you must try to understand the material on your own.
+
+
+# Readings
+
+There are no required textbooks for this class. Useful textbooks to study growth models include:
+
+\bigskip
+
+```{r, echo = FALSE, results="asis"} 
+bib["aghion2008economics"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Acemoglu2009"]
+```
+
+\bigskip
+
+The following books and papers are classics that you need to be familiar with. You do *not* need to buy them. Draw inspiration from them.
+
+\bigskip
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Schumpeter1934"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Hirschman1970"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["KeohaneNye1977"]
+```
+
+<!-- ```{r, echo = FALSE, results="asis"}  -->
+<!-- bib["keohane84"] -->
+<!-- ``` -->
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Ostrom1990"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["North1991"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Tilly1992"]
+```
+
+<!-- ```{r, echo = FALSE, results="asis"}  -->
+<!-- bib["Ross1999"] -->
+<!-- ``` -->
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Sen1999"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Przeworskietal2000"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Polanyi2001"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Weber2002"]
+```
+
+<!-- ```{r, echo = FALSE, results="asis"}  -->
+<!-- bib["Dobbinetal2007"] -->
+<!-- ``` -->
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Easterly2007"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Tocqueville2008"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["BanerjeeDuflo2012"]
+```
+
+<!-- ```{r, echo = FALSE, results="asis"}  -->
+<!-- bib["Oatley2011"] -->
+<!-- ``` -->
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Strange2015"]
+```
+
+*
+```{r, echo = FALSE, results="asis"} 
+bib["Eichengreen2019"]
+```
+
+
+<!-- ```{r, echo = FALSE, results="asis"}  -->
+<!-- bib["Oatley2019"] -->
+<!-- ``` -->
+
+
+\newpage
+
+# Class Schedule
+
+<!-- Other topics:
+- Corruption
+- Non-market strategies (interest groups, rent-seeking) (Jensen, etc)
+-->
+
+The schedule is subject to change. 
+
+## \textcolor{darkblue}{`r advdate(mon, 1)`: }
+
+```{r, echo = FALSE, results="asis"}
+print(bib[c("HallJones1999")],.opts=list(check.entries=FALSE))
+```
+
+```{r, echo = FALSE, results="asis"}
+print(bib[c("Galor2005")],.opts=list(check.entries=FALSE))
+```
+
+<!-- *Background reading:* -->
+
+<!-- ```{r, echo = FALSE, results="asis"}  -->
+<!-- bib["bouscasse2021did"] -->
+<!-- ```  -->
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 2)`: MLK Day}
+
+No class.
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 3)`: Growth models and persistance}
+
+
+```{r, echo = FALSE, results="asis"} 
+bib["Cominetal2010"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Dell2010"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["MiguelRoland2011"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Hornbeck2012"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["VoigtlanderVoth2012"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Guisoetal2016"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Dalgaardetal2018"]
+```
+
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["kelly2019standard"]
+```
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 4)`: Capital, investments, and firms}
+
+<!-- capital, investments, savings, non-market strategies -->
+
+```{r, echo = FALSE, results="asis"} 
+bib["Gray2013"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["jensen2017job"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Samila:2017aa"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["danzman2019merging"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["jensen2020electoral"]
+```
+
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["Coase1937"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["edwards1995saving"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["mellahi2016review"]
+```
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 5)`: Labor: migration and unions}
+
+```{r, echo = FALSE, results="asis"} 
+bib["franzen2006social"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["hayashi2008depressing"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["HainmuellerHicox2010"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["hainmueller2013gets"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Jansenetal2016"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["frymer2021labor"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["bouscasse2021did"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Erikson:2021aa"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["lim2022electoral"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["jones2022end"]
+```
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["Jageretal2022"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Naidu2022"]
+```
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 6)`: Land and agriculture}
+
+```{r, echo = FALSE, results="asis"} 
+bib["heldring2021long"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["finley2021free"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Chang2022"]
+```
+
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["johnston1961role"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["moore1966"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["byerlee2009agriculture"]
+```
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 7)`: Technology and the backlash against globalization}
+
+<!-- Automation -->
+
+```{r, echo = FALSE, results="asis"} 
+bib["AcemogluRestrepo2020"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Owen2020"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["BusemeyerTober2022"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Limetal2022"]
+``` 
+
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["Schumpeter1934"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["iversen2001asset"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["walter2021backlash"]
+``` 
+
+
+\bigskip
+
+
+## \textcolor{darkblue}{`r advdate(mon, 8)`: Human capital}
+
+
+
+```{r, echo = FALSE, results="asis"} 
+#bib["Stijns2006"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["HardingStasavage2013"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["ansell2013political"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["CantoniYuchtman2014"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["SquicciariniVoigtlander2015"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Rauscher2016"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Crokeetal2016"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["de2018clans"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["squicciarini2020devotion"]
+``` 
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["Barro2001"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["GoldinKatz2010"]
+``` 
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 8)`: Social capital and networks}
+
+```{r, echo = FALSE, results="asis"} 
+bib["Satyanathetal2017"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["frank2018small"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["hong2020universal"]
+``` 
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["montgomery1991social"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Putnam2001"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["glaeser2008cities"]
+``` 
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 9)`: Spring Break}
+
+No class.
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 10)`: Institutions (democracy vs autocracy)}
+
+
+```{r, echo = FALSE, results="asis"} 
+bib["FeyrerSacerdote2009"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+#bib["MichalopoulosPapaioannou2013"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Fernandez2014"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Pepinsky2016"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Lacroix2017"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Acemogluetal2019"]
+```
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["Lipset1959"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["odonnell1973modernization"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Dahl1989"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["przeworski1991democracy"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Acemogluetal2001"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["BaumLake2003"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["rodrik2004institutions"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Glaeseretal2004"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Cheibubetal2010"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["acemoglu2021institutional"]
+``` 
+
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 11)`: Institutions (autocracy)}
+
+
+```{r, echo = FALSE, results="asis"} 
+bib["Albertus2015"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Miller2015"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Geddesetal2018"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Doweretal2018"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["RozenasZuhukov2019"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["RizioSkali2019"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Chang2022"]
+```
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["linz2000totalitarian"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Olson1993", "Gandhi2008"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Svolik2012", "Gehlbachetal2016"]
+```
+
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 12)`: Institutions (bureaucracy and state capacity)}
+
+
+```{r, echo = FALSE, results="asis"} 
+bib["acemoglu2015state"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["vogler2019imperial"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["colonnelli2020patronage"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["rich2022outsourcing"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Slough2022"]
+```
+
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["Weber2019"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["hendrix2010measuring"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["pomeranz2019taking"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["besley2022bureaucracy"]
+```
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 13)`: Institutions (informal)}
+
+
+<!-- ```{r, echo = FALSE, results="asis"}  -->
+<!-- bib["Vreeland2003"] -->
+<!-- ``` -->
+
+
+```{r, echo = FALSE, results="asis"} 
+bib["Tsai2006"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Alesinaetal2013"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Cantoni2015"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Nowaketal2016"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Schulz2017"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Lowesetal2017"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Lehne2018"]
+```
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["BourdieuPasseron1990"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Mauss2000"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Lauth2000"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Guisoetal2006"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["AlesinaGuiliano2015"]
+```
+
+
+\bigskip
+
+
+
+##  \textcolor{darkblue}{`r advdate(mon, 14)`: Law, crime, and property rights}
+
+<!-- Content: -->
+<!-- DID (Dube) -->
+
+
+```{r, echo = FALSE, results="asis"} 
+bib["KosterlnikSkarbek2013"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Dubeetal2016"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Dimicoetal2017"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["daniele2022fighting"]
+``` 
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["Anderson1965"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["NorthWeingast1989"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["GottfredsonHirschi1990"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["FiorentiniPeltzman1997"]
+``` 
+
+```{r, echo = FALSE, results="asis"}
+bib["LaPortaetal2008"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Venkatesh2008"]
+``` 
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 15)`: Violence and war}
+
+```{r, echo = FALSE, results="asis"} 
+bib["nunn2011slave"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["berger2013commercial"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Oatley2015"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["braun2016religious"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Kloretal2017"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["DellQuerubin2017"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["LeesonRuss2017"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Feibenbaumetal2018"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["CoxDincecco2019"]
+``` 
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["tilly2017war"]
+``` 
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 16)`: Agency and leadership}
+
+
+```{r, echo = FALSE, results="asis"} 
+bib["LiZhou2005"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["JonesOlken2005"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["KhwajaMian2005"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+#bib["Faccio2006"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["FergusonVoth2008"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["QuerubinSnyder2013"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Carreri2017"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["DalBoetal2017"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["GirardiBowles2018"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["ChenKaising2018"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Thompsonetal2019"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["EasterlyPennings2020"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["carreri2021can"]
+```
+
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 17)`: Trade}
+
+```{r, echo = FALSE, results="asis"} 
+bib["rho2017don"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["Juhasz2018"]
+```
+
+```{r, echo = FALSE, results="asis"} 
+bib["barjamovic2019trade"]
+```
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["Greif1993"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["MilnerKubota2005"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["SpolaoreWacziarg2009"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["HarrisonRodriguezClare2009"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Hays2009"]
+```
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 18)`: Fiscal policy}
+
+```{r, echo = FALSE, results="asis"} 
+bib["Dincecco2010"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["pickering2011ideology"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["RaessPontusson2015"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["ScheveStasavage2016"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["BenedictisWarshaw2016"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["BodeaHigashijima2017"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["HuebscherSattler2017"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Rickard2018"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["andersson_2022"]
+``` 
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["levi1988rule"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["alt1994divided"]
+``` 
+
+
+\bigskip
+
+## \textcolor{darkblue}{`r advdate(mon, 19)`: Models of inequality}
+
+<!-- Idea: so far, we looked at average increase in income. Now, we look at distribution of income-->
+
+```{r, echo = FALSE, results="asis"} 
+bib["Acemogluetal2021"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["acemoglu2022tasks"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["lindgren_oskarsson_2022"]
+``` 
+
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["MoeneWallerstein2001"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["KenworthyPontusson2005"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Piketty2013"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["BlanchardRodrik2021"]
+``` 
+
+
+## \textcolor{darkblue}{`r advdate(mon, 19)`: Money, credit, and debt}
+
+
+```{r, echo = FALSE, results="asis"} 
+bib["Fahlenbrachetal2012"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["SchularickTaylor2012"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["McCartyetal2013"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["CalomirisHaber2014"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["ReinhartRogoff2014"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["mcdowell2017brother"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Lipscy2018"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["CopelovitchSinger2020"]
+``` 
+
+\bigskip
+
+*Background reading:*
+
+```{r, echo = FALSE, results="asis"} 
+bib["Satyanath2005"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Frieden2007"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Broz2009"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["ReinhartRogoff2009"]
+``` 
+
+```{r, echo = FALSE, results="asis"} 
+bib["Stasavage2011"]
+``` 
+
+\newpage
+
+
+# Course policies
+
+## Pandemic/COVID
+
+During this pandemic, it is extremely important that you abide by the public health regulations, the University of Pittsburgh’s health standards and guidelines, and Pitt's Health Rules. These rules have been developed to protect the health and safety of all of us.  Universal face covering is required in all classrooms and in every building on campus, without exceptions, regardless of vaccination status. This means you must wear a face covering that properly covers your nose and mouth when you are in the classroom. If you do not comply, you will be asked to leave class.  It is your responsibility have the required face covering when entering a university building or classroom. For the most up-to-date information and guidance, please visit https://coronavirus.pitt.edu and check your Pitt email for updates before each class.
+
+If you are required to isolate or quarantine, become sick, or are unable to come to class, contact me as soon as possible to discuss arrangements.
+
+## Disability Resource Services
+
+If you have a disability for which you are or may be requesting an accommodation, you are encouraged to contact both your instructor and the Office of Disability Resources and Services, 140 William Pitt Union, 412-648-7890, as early as possible in the term. Disability Resources and Services will verify your disability and determine reasonable accommodations for this course.
+
+## Academic Integrity Policy 
+
+Cheating/plagiarism will not be tolerated. Students suspected of violating the University of Pittsburgh Policy on Academic Integrity, noted below, will be required to participate in the outlined procedural process as initiated by the instructor. A minimum sanction of a zero score for the quiz, exam or paper will be imposed. (For the full Academic Integrity policy, go to www.provost.pitt.edu/info/ai1.html.)
+
+## E-mail Communication Policy
+
+Each student is issued a University e-mail address (username@pitt.edu) upon admittance. This e-mail address may be used by the University for official communication with students. Students are expected to read e-mail sent to this account on a regular basis. Failure to read and react to University communications in a timely manner does not absolve the student from knowing and complying with the content of the communications. The University provides an e-mail forwarding service that allows students to read their e-mail via other service providers (e.g., Hotmail, AOL, Yahoo). Students that choose to forward their e-mail from their pitt.edu address to another address do so at their own risk. If e-mail is lost as a result of forwarding, it does not absolve the student from responding to official communications sent to their University e-mail address. To forward e-mail sent to your University account, go to http://accounts.pitt.edu, log into your account, click on Edit Forwarding Addresses, and follow the instructions on the page. Be sure to log out of your account when you have finished. (For the full E-mail Communication Policy, go to www.bc.pitt.edu/policies/policy/09/09-10-01.html.)
+
+## Diversity and Inclusion
+
+The University of Pittsburgh does not tolerate any form of discrimination,harassment, or retaliation based on disability, race, color, religion, national origin, ancestry, geneticinformation, marital status, familial status, sex, age, sexual orientation, veteran status or gender iden-tity or other factors as stated in the University’s Title IX policy. The University is committed to takingprompt action to end a hostile environment that interferes with the University’s mission. For moreinformation about policies, procedures, and practices, see: https://www.diversity.pitt.edu/about. I ask that everyone in the class strive to help ensure that other members of this class can learn in a support-ive and respectful environment. If there are instances of the aforementioned issues, please contact theTitle IX Coordinator, by calling 412-648-7860, or e-mailing titleixcoordinator@pitt.edu. Reports canalso be filed online: https://www.diversity.pitt.edu/civil-rights-title-ix-compliance/make-report.
+
+
+
