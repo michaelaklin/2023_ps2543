@@ -8,6 +8,4 @@ seo:
   name: Politics of Growth
 ---
 
-# Readme
-
-Material for PS2543, _Politics of Growth_ (Spring 2023), based on a fork of Just the Class.
+This is the website for _Politics of Growth_ (PS2543).
