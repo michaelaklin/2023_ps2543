@@ -10,7 +10,6 @@ geometry: margin=1in
 
 title: "Political Economy of Growth (PS 2543)"
 author: Michaël Aklin
-date: "Spring 2023"
 
 email: "aklin@pitt.edu"
 web: "michaelaklin.github.io"
