@@ -7,17 +7,14 @@ output:
     latex_engine: pdflatex
     template: ~/Dropbox/Teaching/svm-latex-syllabus.tex
 geometry: margin=1in
-
 title: "Political Economy of Growth (PS 2543)"
 author: Michaël Aklin
-
 email: "aklin@pitt.edu"
 web: "michaelaklin.github.io"
 officehours: "TBD"
 office: "TBD"
 classroom: "TBD"
 classhours: "TBD"
-
 fontfamily: mathpazo
 fontsize: 11pt
 header-includes:
