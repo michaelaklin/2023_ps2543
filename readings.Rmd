@@ -365,6 +365,8 @@ Below is a non-exhaustive (though pretty long) list of readings.
 
 `r ref("carreri2021can")`
 
+`r ref("mehmood2021training")`
+
 ## Trade
 
 `r ref("rho2017don")`
