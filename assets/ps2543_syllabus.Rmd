@@ -1,7 +1,7 @@
 ---
 output: 
   pdf_document:
-    keep_tex: true
+    keep_tex: false
     keep_md: false
     fig_caption: yes
     latex_engine: pdflatex
@@ -13,8 +13,8 @@ email: "aklin@pitt.edu"
 web: "michaelaklin.github.io"
 officehours: "TBD"
 office: "TBD"
-classroom: "TBD"
-classhours: "TBD"
+classroom: "4430 Posvar"
+classhours: "12-2:30"
 fontfamily: mathpazo
 fontsize: 11pt
 header-includes:
@@ -53,10 +53,6 @@ ref = function(key) {
 ```
 
 
-
-
-
-
 # Course Objectives
 
 This graduate course is devoted to the study of the politics of economic growth. While this is nominally a course at the intersection of IPE and CPE, you will see that it borrows heavily from other subfields and disciplines (primarily econonomics, but also public policy, management, history, sociology, etc.).
@@ -71,16 +67,15 @@ The aim for this course is:
 
 Note: the course is primarily one based on presentations and discussions. The readings consists in a mix of 'classics' and recent papers. The latter were selected because they are either interesting (if I read them) or they seem interesting (based on the abstract). 
 
-
 # Requirements
 
 **Assignments**. 
 
 - 50%: a research project/pre-analysis plan (including theory + empirical design; data analysis optional) 
 
-- 30%: in-class presentations and participation. 
+- 40%: in-class presentations and participation. 
 
-- 20%: a book review. 
+- 10%: a book review. 
 
 **Grade scale**: 0 < 60: F, 60 < 64: D-, 64 < 67: D, 67 < 70: D+, 70 < 73: C-, 74 < 77: C, 77 < 80: C+, 80 < 84: B-, 84 < 87: B, 87 < 90: B+, 90 < 94: A-, 93 or more: A. "Y < X" means: "from Y up to, but not including X." Grades are not rounded up.
 
@@ -88,6 +83,15 @@ Note: the course is primarily one based on presentations and discussions. The re
 
 **Important note**: you can discuss ideas with your fellow students, but you must do your assignments individually. For pedagogical reasons, it is essential that you must try to understand the material on your own.
 
+# Organization
+
+Every course is divided in three parts:
+
+1. Lecture (if applicable)
+
+2. Paper presentation (+ discussion)
+
+3. Project presentation
 
 # Readings
 
@@ -100,41 +104,39 @@ There are no required textbooks for this class. Useful textbooks to study growth
 * `r ref("Acemoglu2009")`
 
 
-\bigskip
+<!-- \bigskip -->
 
-The following books and papers are classics that you need to be familiar with. You do *not* need to buy them. Draw inspiration from them.
+<!-- The following books and papers are classics that you might want to be familiar with. You do *not* need to buy them. Draw inspiration from them. -->
 
-\bigskip
+<!-- \bigskip -->
 
-* `r ref("Schumpeter1934")`
+<!-- * `r ref("Schumpeter1934")` -->
 
-* `r ref("Hirschman1970")`
+<!-- * `r ref("Hirschman1970")` -->
 
-* `r ref("Ostrom1990")`
+<!-- * `r ref("Ostrom1990")` -->
 
-* `r ref("North1991")`
+<!-- * `r ref("North1991")` -->
 
-* `r ref("Tilly1992")`
+<!-- * `r ref("Tilly1992")` -->
 
-* `r ref("Sen1999")`
+<!-- * `r ref("Sen1999")` -->
 
-* `r ref("Przeworskietal2000")`
+<!-- * `r ref("Przeworskietal2000")` -->
 
-* `r ref("Polanyi2001")`
+<!-- * `r ref("Polanyi2001")` -->
 
-* `r ref("Weber2002")`
+<!-- * `r ref("Weber2002")` -->
 
-* `r ref("Easterly2007")`
+<!-- * `r ref("Easterly2007")` -->
 
-* `r ref("Polanyi2001")`
+<!-- * `r ref("Tocqueville2008")` -->
 
-* `r ref("Tocqueville2008")`
+<!-- * `r ref("BanerjeeDuflo2012")` -->
 
-* `r ref("BanerjeeDuflo2012")`
+<!-- * `r ref("Strange2015")` -->
 
-* `r ref("Strange2015")`
-
-* `r ref("Eichengreen2019")`
+<!-- * `r ref("Eichengreen2019")` -->
 
 \newpage
 
@@ -147,7 +149,7 @@ The following books and papers are classics that you need to be familiar with. Y
 
 The schedule is subject to change. 
 
-## \textcolor{darkblue}{`r advdate(mon, 1)`: }
+## \textcolor{darkblue}{`r advdate(mon, 1)`: Introduction}
 
 `r ref("HallJones1999")`
 
@@ -185,6 +187,8 @@ No class.
 
 `r ref("Dalgaardetal2018")`
 
+`r ref("fouka2022collective")`
+
 \bigskip
 
 *Background reading:*
@@ -220,15 +224,7 @@ No class.
 
 \bigskip
 
-## \textcolor{darkblue}{`r advdate(mon, 5)`: Labor: migration and unions}
-
-`r ref("franzen2006social")`
-
-`r ref("hayashi2008depressing")`
-
-`r ref("HainmuellerHicox2010")`
-
-`r ref("hainmueller2013gets")`
+## \textcolor{darkblue}{`r advdate(mon, 5)`: Labor, migration, and unions}
 
 `r ref("Jansenetal2016")`
 
@@ -242,9 +238,19 @@ No class.
 
 `r ref("jones2022end")`
 
+`r ref("colonnelli2022politics")`
+
 \bigskip
 
 *Background reading:*
+
+`r ref("franzen2006social")`
+
+`r ref("hayashi2008depressing")`
+
+`r ref("HainmuellerHicox2010")`
+
+`r ref("hainmueller2013gets")`
   
 `r ref("Jageretal2022")`
 
@@ -272,9 +278,11 @@ No class.
 
 \bigskip
 
-## \textcolor{darkblue}{`r advdate(mon, 7)`: Technology and the backlash against globalization}
+## \textcolor{darkblue}{`r advdate(mon, 7)`: Technology and infrastructure}
 
 <!-- Automation -->
+
+`r ref("hornung2014immigration")`
 
 `r ref("AcemogluRestrepo2020")`
 
@@ -283,6 +291,10 @@ No class.
 `r ref("BusemeyerTober2022")`
 
 `r ref("Limetal2022")`
+
+`r ref("braun_franke_2022")`
+
+`r ref("voth2022fighting")`
 
 \bigskip
 
@@ -320,7 +332,11 @@ No class.
 \bigskip
 
 *Background reading:*
+
+`r ref("BourdieuPasseron1990")`
   
+`r ref("weitzman1998recombinant")`
+
 `r ref("Barro2001")`
 
 `r ref("GoldinKatz2010")`
@@ -426,7 +442,7 @@ No class.
 
 \bigskip
 
-## \textcolor{darkblue}{`r advdate(mon, 12)`: Institutions (bureaucracy and state capacity)}
+## \textcolor{darkblue}{`r advdate(mon, 12)`: Institutions (bureaucracy, state capacity)}
 
 `r ref("acemoglu2015state")`
 
@@ -494,11 +510,15 @@ No class.
 
 `r ref("daniele2022fighting")`
 
+`r ref("ash2022ideas")`
+
 \bigskip
 
 *Background reading:*
   
 `r ref("Anderson1965")`
+
+`r ref("krueger1974political")`
 
 `r ref("NorthWeingast1989")`
 
@@ -530,7 +550,13 @@ No class.
 
 `r ref("Feibenbaumetal2018")`
 
+`r ref("Feibenbaumetal2018")`
+
 `r ref("CoxDincecco2019")`
+
+`r ref("hager2022does")`
+
+`r ref("Bachmannetal2022")`
 
 \bigskip
 
@@ -677,6 +703,21 @@ No class.
 `r ref("ReinhartRogoff2009")`
 
 `r ref("Stasavage2011")`
+
+## \textcolor{darkblue}{`r advdate(mon, 19)`: Culture}
+
+`r ref("Grosfeldetal2013")`
+
+`r ref("Lowesetal2017")`
+
+`r ref("MichalopoulosXue2021")`
+
+\bigskip
+
+*Background reading:*
+
+`r ref("AlesinaGuiliano2015")`
+
 
 \newpage
 

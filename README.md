@@ -8,4 +8,4 @@ seo:
   name: Politics of Growth
 ---
 
-This is the website for _Politics of Growth_ (PS2543). 
+This is the website for Politics of Growth (PS2543). 
