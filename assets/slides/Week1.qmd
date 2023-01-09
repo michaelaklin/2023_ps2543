@@ -136,7 +136,7 @@ y &\equiv \frac{Y}{L}  \\
 If we assume $F()$ is Cobb-Douglas:
 \begin{align*}
 Y &= K^\alpha L^{1-\alpha} & 0<\alpha<1 \\
-k &= k&\alpha
+y &= k^\alpha
 \end{align*}
 
 Then:
@@ -146,7 +146,7 @@ Then:
 
 ##
 
-- Thus: growth goes to zero and depends on labor, capital
+- Thus: growth (of GDP or GDP per capita) goes to zero and depends on labor, capital
 
 - Empirically: not great to explain divergence
 
@@ -154,22 +154,22 @@ Then:
 
 \begin{align*}
 Y &= (AL)^{1-\alpha} K^\alpha \\
-\dot{k} & sk^\alpha - (n+g+\delta)k
+\dot{k} &= sk^\alpha - (n+g+\delta)k
 \end{align*}
 
 ## 
 
 - That brings us to the 1980s (Heckman, Barro, Mankiew)
 
-- Since then: Schumpeterian growth
+- Since then: Schumpeterian growth (Aghion)
 
 - And: institutional theory
 
-    - Institutions (North, Weingast, Ostrom, Acemoglu, Robinson)
+    - Institutions (North, Weingast, Greif, Ostrom, Acemoglu, Robinson)
     
-    - Contracts and incentives (Coase, Williamson, Duflo, Pande)
+    - (Social) contracts and incentives (Coase, Williamson, Putnam, Duflo, Pande)
     
-    - Iconoclasts (Przeworski, Hirschmann)
+    - Iconoclasts (Przeworski, Hirschman)
 
 ##
 
