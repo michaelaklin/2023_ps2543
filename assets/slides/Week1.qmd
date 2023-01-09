@@ -1,0 +1,244 @@
+---
+title: "Politics of Growth | PS 2543"
+author: "Michaël Aklin"
+institution: "University of Pittsburgh"
+format: beamer
+editor: visual
+---
+
+##
+
+\begin{center}
+Why are we interested in growth?
+\end{center}
+
+##
+
+```{r}
+#| fig-cap: "GDP per capita and life expectancy. Figure: Aklin. Source: WDI."
+library(tidyverse)
+library(WDI)
+
+data.wdi = WDI(indicator = c("gdp.cap" = "NY.GDP.PCAP.KD",
+"life.exp" = "SP.DYN.LE00.IN", "infant.mortality" = "SP.DYN.IMRT.IN", "literacy"="SE.ADT.1524.LT.ZS"),
+    start = 1960,
+    end = 2020,
+    extra = FALSE,
+    cache = NULL,
+    latest = NULL,
+    language = "en")
+
+data.wdi %>% ggplot(aes(x=log(gdp.cap), y=as.numeric(life.exp), color=country)) + 
+geom_smooth(span=1, se=F) +
+theme_bw() +
+xlab("GDP per capita") +
+ylab("Life expectancy") +
+theme(legend.position="none")
+
+```
+
+
+##
+
+```{r}
+#| fig-cap: "GDP per capita and infant mortality (death per 1,000 births). Figure: Aklin. Source: WDI."
+
+data.wdi %>% ggplot(aes(x=log(gdp.cap), y=infant.mortality, color=country)) + 
+geom_smooth(se=F) +
+theme_bw() +
+xlab("GDP per capita") +
+ylab("Infant mortality (per 1k births)") +
+theme(legend.position="none")
+
+```
+
+
+##
+
+```{r}
+#| fig-cap: "GDP per capita and literacy. Figure: Aklin. Source: WDI."
+
+data.wdi %>% ggplot(aes(x=log(gdp.cap), y=literacy, color=country)) + 
+geom_smooth(span=1, se=F) +
+theme_bw() +
+xlab("GDP per capita") +
+ylab("Literacy (%)") +
+theme(legend.position="none")
+
+```
+
+##
+
+Two divisions in political economy:
+
+- (i) Micro vs. macro
+
+- (ii) Long-term (growth) vs. short term (business cycle)
+
+- 19th century: interest in long-term growth (Ricardo, Smith)
+
+- Late 19th-130s: lots of interest in business cycle (Great Depression)
+
+- Since 1945: return of growth studies
+
+    - Rapid growth in the West
+    
+    - Growing global inequality
+    
+## Great divergence
+
+![Data: Maddison. Source: wiki.](./materials/1920px-Maddison_GDP_per_capita_1500-1950.png)
+
+## How to make sense of it?
+
+Early attempts: Solow-Swan growth models. 
+
+Input: capital. Labor, technology: constant
+
+\begin{align*}
+Y &= F(K) & F\equiv\mbox{prod function} \\
+F'(K) &> 0 & \mbox{Inada assumptions}\\
+F''(K) &< 0
+\end{align*}
+
+Q: how does Y grow? A: when K grows!
+
+Q: how does K grow? A: investments! 
+
+##
+
+\begin{align*}
+\frac{\partial K}{\partial t} &\equiv \dot{K} = I \\
+&= sY - \delta K \\
+&= sF(K) - \delta K \\
+K^* &\rightarrow sF(K) - \delta K = 0
+\end{align*}
+
+2nd last expr: fundamental differential equation of neoclassical growth theory
+
+## Adding labor
+
+\begin{align*}
+Y &= F(K, L) \\
+F(\lambda K, \lambda L) &= \lambda F(K,L) & \mbox{constant ret scale} \\
+\end{align*}
+
+If pop $L$ grows at rate $n$:
+\begin{align*}
+y &\equiv \frac{Y}{L}  \\
+&= \frac{F(K,L)}{L}  \\
+&= F(K/L, 1) \\
+&\equiv f(k)
+\end{align*}
+
+## 
+
+If we assume $F()$ is Cobb-Douglas:
+\begin{align*}
+Y &= K^\alpha L^{1-\alpha} & 0<\alpha<1 \\
+k &= k&\alpha
+\end{align*}
+
+Then:
+\begin{align*}
+\dot{k} = sf(k) - (\delta+n)k
+\end{align*}
+
+##
+
+- Thus: growth goes to zero and depends on labor, capital
+
+- Empirically: not great to explain divergence
+
+- Addition: human capital, technology (grows at rate $g$)
+
+\begin{align*}
+Y &= (AL)^{1-\alpha} K^\alpha \\
+\dot{k} & sk^\alpha - (n+g+\delta)k
+\end{align*}
+
+## 
+
+- That brings us to the 1980s (Heckman, Barro, Mankiew)
+
+- Since then: Schumpeterian growth
+
+- And: institutional theory
+
+    - Institutions (North, Weingast, Ostrom, Acemoglu, Robinson)
+    
+    - Contracts and incentives (Coase, Williamson, Duflo, Pande)
+    
+    - Iconoclasts (Przeworski, Hirschmann)
+
+##
+
+![](../frame.png)
+
+## Assignments
+
+- 50%: a research project/pre-analysis plan (including theory + empirical design; data analysis optional) 
+
+- 40%: in-class presentations and participation. 
+
+- 10%: a book review. 
+
+## Structure
+
+1. Lecture (when applicable)
+
+2. Presentations of papers
+
+3. Presentation of own research
+
+## Presenting a paper
+
+- ~20 minutes
+
+- Summarize:
+
+    1. Research question and why it matters (if it does)
+    
+    2. Theory: what explains the variation of what and why
+    
+    3. Empirical strategy and results
+    
+- Discuss: what's next?
+
+    - Expanding theory?
+    
+    - Using empirical strategy?
+    
+    - etc.
+
+
+## Presenting your own research
+
+- You will all present at least three times
+
+1. Research question
+
+2. Theory
+
+3. Empirical design
+
+4. Analysis
+
+## Online
+
+Signup sheet for presentations: [shorturl.at/bjkmt](shorturl.at/bjkmt).
+
+Homepage for the course: [https://michaelaklin.github.io/2023_ps2543/](https://michaelaklin.github.io/2023_ps2543/)
+
+
+##
+
+\begin{center}
+Questions?
+\end{center}
+
+\bigskip
+
+\bigskip
+
+aklin@pitt.edu

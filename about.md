@@ -5,7 +5,7 @@ description: >-
     Course policies and information.
 ---
 
-# About
+<!-- # About
 {:.no_toc}
 
 ## Table of contents
@@ -14,12 +14,9 @@ description: >-
 1. TOC
 {:toc}
 
----
+--- -->
 
 ## About
 
-This page contains all the material needed for PS2543 (spring 2023).
+This page contains all the material needed for Politics of Growth, PS2543 (spring 2023).
 
-## Contact
-
-For any question, please reach out to aklin@pitt.edu. 
