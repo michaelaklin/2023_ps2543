@@ -64,7 +64,7 @@ ref = function(key) {
 
 This version of the syllabus is from: `r Sys.Date()`.
 
-Signup sheet for presentations: [shorturl.at/bjkmt](shorturl.at/bjkmt).
+Signup sheet for presentations: shorturl.at/bjkmt.
 
 Homepage for the course: [https://michaelaklin.github.io/2023_ps2543/](https://michaelaklin.github.io/2023_ps2543/)
 
