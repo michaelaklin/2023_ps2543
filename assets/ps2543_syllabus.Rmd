@@ -327,6 +327,9 @@ No class.
 
 `r ref("voth2022fighting")`
 
+\textcolor{red}{New!} `r ref("Akcigitetal2023")`
+
+
 \bigskip
 
 *Background reading:*
@@ -618,7 +621,6 @@ No class.
 \bigskip
 
 ## \textcolor{darkblue}{`r advdate(mon, 14)`: Agency and leadership}
-
 
 `r ref("QuerubinSnyder2013")`
 
