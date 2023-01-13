@@ -62,9 +62,13 @@ ref = function(key) {
 
 # Online stuff
 
+This version of the syllabus is from: `r Sys.Date()`.
+
 Signup sheet for presentations: [shorturl.at/bjkmt](shorturl.at/bjkmt).
 
 Homepage for the course: [https://michaelaklin.github.io/2023_ps2543/](https://michaelaklin.github.io/2023_ps2543/)
+
+Updates are marked with "\textcolor{red}{New!}"
 
 # Course objectives
 
@@ -222,6 +226,10 @@ No class.
 
 `r ref("BlanchardRodrik2021")`
 
+\textcolor{red}{New!} `r ref("guinnane2021we")`
+
+\textcolor{red}{New!} `r ref("guinnane2022medieval")`
+
 <!-- \bigskip -->
 
 <!-- ## \textcolor{darkblue}{`r advdate(mon, 4)`: Capital, investments, and firms} -->
@@ -253,9 +261,13 @@ No class.
 
 \bigskip
 
-## \textcolor{darkblue}{`r advdate(mon, 4)`: Labor, migration, and unions}
+## \textcolor{darkblue}{`r advdate(mon, 4)`: Labor, population, migration, and unions}
+
+`r ref("voigtlander2013three")`
 
 `r ref("Jansenetal2016")`
+
+\textcolor{red}{New!} `r ref("dean2016conflict")`
 
 `r ref("frymer2021labor")`
 
@@ -263,11 +275,13 @@ No class.
 
 `r ref("Erikson:2021aa")`
 
+\textcolor{red}{New!} `r ref("frymer2021labor")`
+
 `r ref("lim2022electoral")`
 
 `r ref("jones2022end")`
 
-`r ref("colonnelli2022politics")`
+\textcolor{red}{New!} `r ref("colonnelli2022politics")`
 
 \bigskip
 
@@ -278,6 +292,8 @@ No class.
 `r ref("hayashi2008depressing")`
 
 `r ref("HainmuellerHicox2010")`
+
+`r ref("guinnane2011historical")`
 
 `r ref("hainmueller2013gets")`
   
@@ -362,7 +378,7 @@ No class.
 
 \bigskip
 
-## \textcolor{darkblue}{`r advdate(mon, 7)`: Social capital and networks}
+## \textcolor{darkblue}{`r advdate(mon, 7)`: Social capital, networks, corruption}
 
 `r ref("Satyanathetal2017")`
 
@@ -370,7 +386,15 @@ No class.
 
 `r ref("hong2020universal")`
 
+`r ref("battaglini2022refining")`
+
 `r ref("canen2022social")`
+
+\textcolor{red}{New!} `r ref("jackson2023dynamics")`
+
+\textcolor{red}{New!} `r ref("gulino2023")`
+
+\textcolor{red}{New!} `r ref("browne2023man")`
 
 \bigskip
 
@@ -582,6 +606,8 @@ No class.
 `r ref("hager2022does")`
 
 `r ref("Bachmannetal2022")`
+
+\textcolor{red}{New!} `r ref("Buggleetal2023")`
 
 \bigskip
 
