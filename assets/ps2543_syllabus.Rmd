@@ -313,6 +313,8 @@ No class.
 
 `r ref("Juhasz2018")`
 
+\textcolor{red}{New!} `r ref("bowles2019neolithic")`
+
 `r ref("AcemogluRestrepo2020")`
 
 `r ref("Owen2020")`
@@ -328,6 +330,8 @@ No class.
 `r ref("voth2022fighting")`
 
 \textcolor{red}{New!} `r ref("Akcigitetal2023")`
+
+\textcolor{red}{New!} `r ref("Kellyetal2023")`
 
 
 \bigskip
@@ -398,6 +402,8 @@ No class.
 \textcolor{red}{New!} `r ref("gulino2023")`
 
 \textcolor{red}{New!} `r ref("browne2023man")`
+
+\textcolor{red}{New!} `r ref("korovkin2023conflict")`
 
 \bigskip
 
@@ -723,6 +729,8 @@ No class.
 `r ref("finley2021free")`
 
 `r ref("Chang2022")`
+
+\textcolor{red}{New!} `r ref("Fernndezetal2023")`
 
 \bigskip
 
