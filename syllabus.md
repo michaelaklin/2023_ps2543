@@ -18,13 +18,15 @@ Here's the list of books for the book review.
 
 * Cowen, T., 2013. _Average is over: Powering America beyond the age of the great stagnation_. Penguin.
 
-* Goldin, C. and Katz, L.F., 2010. The race between education and technology. Harvard University Press.
+* Goldin, C. and Katz, L.F., 2010. _The race between education and technology_. Harvard University Press.
 
-* Gordon, R.J., 2016. The rise and fall of American growth. In The Rise and Fall of American Growth. Princeton University Press.
+* Gordon, R.J., 2016. _The rise and fall of American growth_. Princeton University Press.
 
 * Greif, A., 2006. _Institutions and the path to the modern economy: Lessons from medieval trade_. Cambridge University Press.
 
-* Mokyr, J., 2016. _A culture of growth. In A Culture of Growth_. Princeton University Press.
+* McCloskey, D., 2010. _Bourgeois dignity_
+
+* Mokyr, J., 2016. _A culture of growth_. Princeton University Press.
 
 * Tooze, A., 2015. _The deluge: the Great War, America and the remaking of the global order, 1916-1931_. Penguin.
 
