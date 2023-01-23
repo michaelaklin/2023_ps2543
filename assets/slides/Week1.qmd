@@ -1,5 +1,5 @@
 ---
-title: "Politics of Growth | PS 2543"
+title: "Politics of Growth | PS 2543 | Week 1"
 author: "Michaël Aklin"
 institution: "University of Pittsburgh"
 format: beamer

@@ -1,0 +1,243 @@
+---
+title: "Politics of Growth | PS 2543 | Week 2"
+author: "Michaël Aklin"
+institution: "University of Pittsburgh"
+format: beamer
+editor: visual
+---
+
+## Administration
+
+- Office hours, email
+
+- Presentations, guest speakers
+
+- Reminder: research presentation
+
+- Book review
+
+## Instructions
+
+* Overall: ~3 pages
+
+* Context of the book (debates/papers/books to which it ties to) (~1 page)
+
+* Chapter-by-chapter summary (~1 page)
+
+* Ideas of **politics/social science** research project (~1 page)
+
+* Due at the end of the semester
+
+
+## 
+
+* Allen. 2009. _The British industrial revolution in global perspective_
+
+* Brynjolfsson and McAfee. 2014. _The second machine age_
+
+* Cowen. 2013. _Average is over_
+
+* Goldin and Katz. 2010. _The race between education and technology_
+
+* Gordon. 2016. _The rise and fall of American growth_
+
+* Greif. 2006. _Institutions and the path to the modern economy_
+
+* McCloskey. 2010. _Bourgeois dignity_
+
+* Mokyr, J., 2016. _A culture of growth_
+
+* Tooze, A., 2015. _The deluge_
+
+##
+
+\begin{center}
+What did we talk about last time?
+\end{center}
+
+
+## Last time...
+
+::: {.incremental}
+
+- Growth (change) and income (level): key for living standards
+
+- Starting from simple Solow-Swan: critical role played by...
+
+    - K (capital), L (labor), A (technology)
+
+    - Steady state: no growth
+
+    - Only tech can maintain growth
+
+- Growth can come from (Mokyr 1990):
+
+    - Capital accumulation (_Solovian growth_)
+
+    - Scale (pop) (Boserup)
+
+    - Technological innovation (_Schumpetarian growth_)
+
+    - Market expansion (_Smithian growth_)
+
+- First part of the semester: politics of K, L, A
+
+- Second part of the semester: study of markets, institutions
+
+:::
+
+## This week: history
+
+- Key role played by history
+
+- Impossible to understand growth, income, wealth w/o historical context
+
+- Two critical periods: 
+
+    1. Neolithic (stone) age (~12,000 BCE)
+
+    2. Industrial revolution
+
+## Context
+
+- Living standards: no clear trend 0-1600ish
+
+- Does **not** mean absence of innovations
+
+    - Eg glass, paper, printing press, compass, etc.
+
+- Does **not** mean stability
+
+    - Eg decline after ~600, Black Death, etc.
+
+- Thus: ups and downs
+
+- Until...
+
+## Industrial revolution
+
+- 1st IR: UK, 1760s until early 1800s
+
+- Dramatic change in technology (steam engine) and society
+
+- Dramatic impact on growth and income
+
+- Long-term effects (cor GDP 1900, 2010: $\rho=0.66$)
+
+##
+
+```{r}
+#| fig-cap: "Log GDP/cap over time. Figure: Aklin. Data: Maddison."
+library(tidyverse)
+library(haven)
+library(tidyr)
+mpd2020 = read_dta("./materials/mpd2020.dta")
+
+d2 = mpd2020 %>%
+  select(year, gdppc, country) %>%
+  filter(year==1900 | year==2010) %>%
+  tidyr::pivot_wider(
+    names_from = year,
+    values_from = gdppc,
+    names_prefix = "gdppc")
+
+#d2 = d2[complete.cases(d2),]
+#cor(d2$gdppc1900, d2$gdppc2010)
+
+mpd2020 %>% filter(year>1500) %>%
+ggplot(aes(x=year, y=log(gdppc), color=country)) +
+geom_line() +
+theme_bw() +
+theme(legend.position="none") 
+
+```
+
+##
+
+::: {.incremental}
+
+- Many competing theories for IR
+
+    - Push: excess labor exiting agriculture (proletariat)
+
+    - Pull: new technology and decline in prod costs
+
+- Where did the "pull" come from? Hypotheses...
+
+- Demand: strong demand for consumer goods (London)
+
+- Supply and demand: capital from colonies (limited evidence)
+
+- Supply: a "culture of growth" that helped tech innovations(Enlightenment; Mokyr)
+
+- Lot of great work: Joel Mokyr, Robert Allen, Deirdre McCloskey, etc.
+
+:::
+
+##
+
+- Key insight: effects are **persistent** 
+
+- Clear when looking at correlation of GDP over time
+
+- New: could _effects_ from 1700s (say) have _consequences_ today?
+
+- In polisci: path dependency (Pierson 2000)
+
+- Literature on long-term determinants of growth
+
+- Often criticized
+
+    - Theory. Mechanisms? 
+
+    - Empirics (eg Kelly 2019, Guinanne 2022)
+
+## Sidenote
+
+::: {.incremental}
+
+- Raises the prob of definition of causal effects. Neyman (1923), Rubin (1974), Holland (1986)
+
+- Potential outcomes: $Y^0$, $Y^1$ for $D\in\{0,1\}$
+
+- Unit treatment effect: $Y_i^1-Y_i^0$
+
+- Fundamental problem of causal inference
+
+- If $Y^0, Y^1 \perp \!\!\! \perp D$: can estimate ATE$=E[Y^1]-E[Y^0]$
+
+- Danger: confounders, selection, baseline
+
+- Two approaches to do so: design- and model-based inference
+
+- $Y^0, Y^1 \perp \!\!\! \perp D | \mathbf{X}$ $\rightarrow$ CATE$=E[Y^1 | \mathbf{X}]-E[Y^0 | \mathbf{X}]$
+
+:::
+
+##
+
+- Anyway...
+
+- Problem here: can one generate a plausible counterfactual?
+
+- Example: Fogel and railroads (1964)
+
+- Need to think very carefully about...
+
+    - Theory (mechanisms)
+
+    - Source of variation in treatment
+
+    - Alternative causal paths
+
+##
+
+\begin{center}
+Questions?
+\end{center}
+
+\bigskip
+
+\bigskip
+
+aklin@pitt.edu

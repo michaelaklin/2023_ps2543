@@ -7,8 +7,8 @@ description: Links to course material.
 # Slides
 
 <!-- * Week 1 [slides](./assets/slides/Session_1.html) -->
-* Week 1 link
-* Week 2 link
+* Week 1 [slides](./assets/slides/Week1.pdf)
+* Week 2 [slides](./assets/slides/Week2.pdf)
 * Week 3 link
 * Week 4 link
 * Week 5 link
