@@ -1,0 +1,126 @@
+---
+title: "Politics of Growth | PS 2543 | Week 5"
+author: "Michaël Aklin"
+institution: "University of Pittsburgh"
+format: beamer
+editor: visual
+---
+
+## Research: where to start...
+
+::: {.incremental}
+
+- Always a challenge...
+
+- One approach: \textbf{gap} in the literature
+
+- Idea: people have looked at...
+
+    - $X \rightarrow Y$
+
+    - $Z \rightarrow Y$
+
+    - What about $X \rightarrow Z$?
+
+- Not very compelling
+
+- Instead: focus on **expanding** research rather than filling gaps
+
+:::
+
+##
+
+::: {.incremental}
+
+More compelling...
+
+- **Interesting** treatments
+
+    - Can come from other disciplines
+
+    - Eg: social capital
+
+- **Important** outcomes
+
+    - People care about it!
+
+- Spell out **mechanisms**
+
+- Ask a yes/no question
+
+:::
+
+##
+
+::: {.incremental}
+
+- Typically: contribution comes from...
+
+- New theory
+
+    - Democratic peace
+
+- New data
+
+    - Military recruitment early 1800s
+
+- New empirical strategy
+
+    - How can we measure political ideology?
+
+- (Almost) never all three... but at least one!
+
+:::
+
+## Theory
+
+::: {.incremental}
+
+- Many ways to proceed. Here's mine.
+
+- Step 1: use a decision/game-theoretic approach:
+
+    1. Players: who matters? (**unit of analysis**)
+
+    2. Strategies: what can players do?
+
+    3. Payoffs: what are their preferences?
+
+- Step 2: generate comparative statics
+
+    - When pref change, what happens to strategies?
+
+    - Note: you want observables on both!
+
+- Does not preclude more complicated approaches (beliefs, culture, networks, etc.)
+
+:::
+
+##
+
+::: {.incremental}
+
+- Sharpen your research question (yes/no)
+
+- Make sure that the outcome is important, or
+
+- Make sure the treatment is interesting, or
+
+- Make sure your data/empirical strategy are innovative
+
+- Use building blocks (players, strategies, payoffs) to build your argument
+
+:::
+
+
+##
+
+\begin{center}
+Questions?
+\end{center}
+
+\bigskip
+
+\bigskip
+
+aklin@pitt.edu

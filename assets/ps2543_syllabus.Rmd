@@ -50,11 +50,16 @@ advdate <- function(obj, adv) {
 # # capture.output(print(biblio[key])) # This would be the way to print the ref
 #}
 
-library(RefManageR)
-bib = ReadBib("~/Dropbox/BibLibrary.bib")
-BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+# library(RefManageR)
+# bib = ReadBib("~/Dropbox/BibLibrary.bib")
+# BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+# ref = function(key) {
+#     capture.output(bib[key])
+# }
+
+bib = bibtex::read.bib("~/Dropbox/BibLibrary.bib")
 ref = function(key) {
-    capture.output(bib[key])
+    format(bib[key], style = "text")
 }
 
 
@@ -212,6 +217,8 @@ No class.
 
 `r ref("fouka2022collective")`
 
+`r ref("cage2023")`
+
 \bigskip
 
 *Background reading:*
@@ -332,6 +339,8 @@ No class.
 \textcolor{red}{New!} `r ref("Akcigitetal2023")`
 
 \textcolor{red}{New!} `r ref("Kellyetal2023")`
+
+\textcolor{red}{New!} `r ref("BraxtonTaska2023")`
 
 
 \bigskip
@@ -476,6 +485,8 @@ No class.
 `r ref("Albertus2015")`
 
 `r ref("Miller2015")`
+
+\textcolor{red}{New!} `r ref("zhukov2018stalin")`
 
 `r ref("Geddesetal2018")`
 
@@ -639,6 +650,8 @@ No class.
 `r ref("Thompsonetal2019")`
 
 `r ref("durante2019political")`
+
+\textcolor{red}{New!} `r ref("lacroix2019positive")`
 
 `r ref("EasterlyPennings2020")`
 
